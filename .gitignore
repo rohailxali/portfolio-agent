@@ -1,0 +1,28 @@
+# Python
+venv/
+__pycache__/
+*.pyc
+*.pyo
+.env
+*.egg-info/
+dist/
+build/
+.pytest_cache/
+
+# Node
+node_modules/
+.next/
+out/
+dist/
+
+# Misc
+.DS_Store
+*.log
+Lib/
+
+# Tauri
+desktop/target/
+
+# Sensitive
+*.env
+!.env.example

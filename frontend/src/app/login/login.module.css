@@ -1,0 +1,120 @@
+.root {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-base);
+  background-image:
+    repeating-linear-gradient(0deg, transparent, transparent 39px, var(--border) 39px, var(--border) 40px),
+    repeating-linear-gradient(90deg, transparent, transparent 39px, var(--border) 39px, var(--border) 40px);
+}
+
+.card {
+  width: 380px;
+  border: 1px solid var(--border-bright);
+  background: var(--bg-surface);
+  padding: 40px;
+  position: relative;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  top: -1px; left: -1px;
+  width: 20px; height: 20px;
+  border-top: 2px solid var(--accent-amber);
+  border-left: 2px solid var(--accent-amber);
+}
+
+.card::after {
+  content: "";
+  position: absolute;
+  bottom: -1px; right: -1px;
+  width: 20px; height: 20px;
+  border-bottom: 2px solid var(--accent-amber);
+  border-right: 2px solid var(--accent-amber);
+}
+
+.header {
+  margin-bottom: 32px;
+}
+
+.logo {
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  color: var(--accent-amber);
+}
+
+.sub {
+  font-size: 11px;
+  color: var(--text-muted);
+  margin-top: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.label {
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  color: var(--text-muted);
+}
+
+.input {
+  background: var(--bg-base);
+  border: 1px solid var(--border);
+  color: var(--text-primary);
+  padding: 10px 12px;
+  font-size: 13px;
+  outline: none;
+  transition: border-color 0.15s;
+  border-radius: var(--radius-sm);
+}
+
+.input:focus {
+  border-color: var(--accent-amber);
+}
+
+.error {
+  font-size: 12px;
+  color: var(--accent-red);
+  padding: 8px 10px;
+  border: 1px solid var(--accent-red);
+  background: rgba(248, 81, 73, 0.08);
+  border-radius: var(--radius-sm);
+}
+
+.submit {
+  background: var(--accent-amber);
+  color: var(--bg-base);
+  border: none;
+  padding: 12px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  transition: opacity 0.15s;
+  border-radius: var(--radius-sm);
+  margin-top: 4px;
+}
+
+.submit:hover:not(:disabled) {
+  opacity: 0.88;
+}
+
+.submit:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}

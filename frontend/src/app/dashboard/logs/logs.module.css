@@ -1,0 +1,116 @@
+.page { padding: 32px; display: flex; flex-direction: column; height: 100vh; }
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+}
+
+.search {
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  color: var(--text-primary);
+  padding: 8px 14px;
+  font-size: 12px;
+  width: 260px;
+  outline: none;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-mono);
+}
+
+.search:focus { border-color: var(--accent-amber); }
+
+.logList {
+  flex: 1;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  font-family: var(--font-mono);
+  font-size: 12px;
+}
+
+.entry {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  padding: 8px 12px;
+  border-radius: var(--radius-sm);
+  border-left: 2px solid transparent;
+  transition: background 0.1s, border-color 0.1s;
+}
+
+.entry:hover {
+  background: var(--bg-surface);
+  border-left-color: var(--accent-amber);
+}
+
+.ts { color: var(--text-muted); font-size: 11px; flex-shrink: 0; min-width: 160px; }
+.action { color: var(--accent-blue); flex-shrink: 0; }
+.resource { color: var(--text-secondary); font-size: 11px; }
+.ip { color: var(--text-muted); font-size: 11px; margin-left: auto; }
+
+.meta {
+  margin-left: auto;
+  font-size: 10px;
+  color: var(--text-muted);
+}
+
+.meta summary { cursor: pointer; }
+
+.meta pre {
+  background: var(--bg-base);
+  border: 1px solid var(--border);
+  padding: 8px;
+  margin-top: 6px;
+  font-size: 10px;
+  border-radius: var(--radius-sm);
+  white-space: pre-wrap;
+  word-break: break-all;
+  color: var(--text-secondary);
+}
+
+.loading, .empty {
+  color: var(--text-muted);
+  letter-spacing: 0.1em;
+  font-size: 12px;
+  padding: 40px 0;
+  text-align: center;
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border);
+  margin-top: 8px;
+}
+
+.pageBtn {
+  background: none;
+  border: 1px solid var(--border);
+  color: var(--text-secondary);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  padding: 6px 14px;
+  border-radius: var(--radius-sm);
+  transition: all 0.15s;
+}
+
+.pageBtn:hover:not(:disabled) {
+  border-color: var(--accent-amber);
+  color: var(--accent-amber);
+}
+
+.pageBtn:disabled { opacity: 0.3; cursor: not-allowed; }
+
+.pageNum { font-size: 11px; color: var(--text-muted); letter-spacing: 0.1em; }
