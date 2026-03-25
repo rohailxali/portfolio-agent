@@ -2,7 +2,7 @@
 
 import { useState, FormEvent } from "react";
 import { useRouter } from "next/navigation";
-import { useAuth } from "../../lib/auth";
+import { useAuth } from "@/lib/auth";
 import styles from "./login.module.css";
 
 export default function LoginPage() {

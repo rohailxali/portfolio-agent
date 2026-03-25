@@ -1,8 +1,8 @@
 "use client";
 
 import { useState, useRef, useEffect, KeyboardEvent } from "react";
-import { api } from "../../../lib/api";
-import type { ChatResponse, PendingAction } from "../../../types";
+import { api } from "@/lib/api";
+import type { ChatResponse, PendingAction } from "@/types";
 import styles from "./agent.module.css";
 
 interface ChatMessage {
