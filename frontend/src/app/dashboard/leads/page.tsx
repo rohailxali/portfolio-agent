@@ -1,8 +1,8 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { api } from "@/lib/api";
-import type { Lead } from "@/types";
+import { api } from "../../../lib/api";
+import type { Lead } from "../../../types";
 import styles from "./leads.module.css";
 
 const STATUS_ORDER = ["new", "classified", "contacted", "converted", "spam"];

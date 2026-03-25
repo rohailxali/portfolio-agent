@@ -1,8 +1,8 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { api } from "@/lib/api";
-import type { AuditLog } from "@/types";
+import { api } from "../../../lib/api";
+import type { AuditLog } from "../../../types";
 import styles from "./logs.module.css";
 
 export default function LogsPage() {

@@ -1,8 +1,8 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { api } from "@/lib/api";
-import type { DeployEvent } from "@/types";
+import { api } from "../../../lib/api";
+import type { DeployEvent } from "../../../types";
 import styles from "../page.module.css";
 
 export default function DeploymentsPage() {

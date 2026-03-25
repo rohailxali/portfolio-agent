@@ -1,9 +1,9 @@
 "use client";
 
 import { useState, useEffect, useCallback } from "react";
-import { AuthContext } from "@/lib/auth";
-import { api, setToken, getToken } from "@/lib/api";
-import type { User } from "@/types";
+import { AuthContext } from "../lib/auth";
+import { api, setToken, getToken } from "../lib/api";
+import type { User } from "../types";
 
 export function Providers({ children }: { children: React.ReactNode }) {
   const [user, setUser] = useState<User | null>(null);
