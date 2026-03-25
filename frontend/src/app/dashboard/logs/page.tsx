@@ -11,15 +11,17 @@ export default function LogsPage() {
   const [page, setPage] = useState(1);
   const [filter, setFilter] = useState("");
 
-  const load = () => {
-    setLoading(true);
-    api.logs
-      .list(page, filter || undefined)
-      .then((res) => setLogs(res.logs))
-      .finally(() => setLoading(false));
-  };
+  useEffect(() => {
+    const load = () => {
+      setLoading(true);
+      api.logs
+        .list(page, filter || undefined)
+        .then((res) => setLogs(res.logs))
+        .finally(() => setLoading(false));
+    };
 
-  useEffect(() => { load(); }, [page, filter]);
+    load();
+  }, [page, filter]);
 
   return (
     <div className={styles.page}>
